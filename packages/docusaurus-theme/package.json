@@ -3,7 +3,7 @@
   "main": "dist/lib/index.js",
   "types": "dist/types/index.d.ts",
   "sideEffects": false,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "scripts": {
     "build": "tsc"
   },
