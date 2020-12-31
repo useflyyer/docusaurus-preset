@@ -50,3 +50,39 @@ On your `docusaurus.config.js` add `@flayyer/docusaurus-preset` at the end of yo
   ],
 }
 ```
+
+## Development
+
+Clone this repository with:
+
+```bash
+git clone https://github.com/flayyer/docusaurus-preset.git
+cd docusaurus-preset
+```
+
+Install dependencies and bootstrap [Lerna](https://github.com/lerna/lerna/):
+
+```bash
+yarn install
+yarn run bootstrap
+```
+
+Build packages:
+
+```bash
+yarn run build
+```
+
+## Publishing
+
+Create a new [Lerna version](https://github.com/lerna/lerna/tree/main/commands/version#readme):
+
+```bash
+yarn run lerna version
+```
+
+Publish packages:
+
+```bash
+yarn run lerna publish
+```
