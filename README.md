@@ -84,5 +84,5 @@ yarn run lerna version
 Publish packages:
 
 ```bash
-yarn run lerna publish
+yarn run lerna publish from-git --yes
 ```
