@@ -13,7 +13,7 @@ yarn add @flayyer/docusaurus-preset
 npm install --save @flayyer/docusaurus-preset
 ```
 
-On your `docusaurus.config.js` add `@flayyer/docusaurus-preset` at the end of your `preset` array:
+On your `docusaurus.config.js` add `@flayyer/docusaurus-preset` at the end of your `presets` array:
 
 ```js
 {
@@ -32,7 +32,7 @@ On your `docusaurus.config.js` add `@flayyer/docusaurus-preset` at the end of yo
           template: "page",
           variables: {
             // Enable variable replacement
-            title: "{{id}} - {{description}}",
+            title: "{{id}} - {{title}}",
             description: "{{description}}",
             static: "Plain hardcoded string",
           },
