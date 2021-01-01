@@ -2,7 +2,7 @@
   "name": "@flayyer/docusaurus-preset",
   "main": "dist/lib/index.js",
   "types": "dist/types/index.d.ts",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publishConfig": {
     "access": "public"
   },
@@ -21,7 +21,7 @@
     "typescript": "^4.1.3"
   },
   "dependencies": {
-    "@flayyer/docusaurus-theme": "^0.1.1",
+    "@flayyer/docusaurus-theme": "^0.1.2",
     "debug": "^4.3.1"
   }
 }
