@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-shadow */
 
-import * as path from "path";
+import path from "path";
 
 import { Plugin, DocusaurusContext } from "@docusaurus/types";
 import Debug from "debug";
@@ -40,7 +40,7 @@ class PluginFlayyer implements IPluginFlayyer {
   // getTypeScriptThemePath: IPluginFlayyer["getTypeScriptThemePath"] = () => {};
 
   getThemePath: IPluginFlayyer["getThemePath"] = () => {
-    const folder = path.resolve(__dirname, "..", "..", "src", "theme"); // TODO: improve
+    const folder = path.resolve(__dirname, "theme");
     debug("executing getThemePath", folder);
     return folder;
   };
