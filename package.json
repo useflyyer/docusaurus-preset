@@ -17,9 +17,9 @@
     ]
   },
   "devDependencies": {
-    "@flayyer/eslint-config": "^1.0.1",
-    "eslint": "^7.16.0",
-    "husky": "^4.3.6",
+    "@flayyer/eslint-config": "^1.0.3",
+    "eslint": "^7.18.0",
+    "husky": "^4.3.8",
     "lerna": "^3.22.1",
     "lint-staged": "^10.5.3",
     "prettier": "^2.2.1",
