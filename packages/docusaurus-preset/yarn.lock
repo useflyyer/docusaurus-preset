@@ -12,28 +12,28 @@
     querystring "0.2.0"
     webpack-merge "^4.2.2"
 
-"@flayyer/docusaurus-theme@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@flayyer/docusaurus-theme/-/docusaurus-theme-0.1.2.tgz#8133bbce189caac5ef557268ac5ac40e8edde69c"
-  integrity sha512-8ZQTzi6FoPNYlSzxiaGYBEKRnZy0JeQruRhnE9MpYosL0pS7YTEOVwtrLG5Yd2CzovL59TaWFSSkCpxt3zaXZQ==
+"@flayyer/docusaurus-theme@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@flayyer/docusaurus-theme/-/docusaurus-theme-0.1.3.tgz#d991b299b611ea258d0a7b41c3620855af274dfe"
+  integrity sha512-t6tuxyqoV3SmVoIlT/ddjgmj56G4TMYi7PL7tbOJ+Stg6cUp1PMold1ujq3TVB19KvLrppKm19PQWaXZake1ng==
   dependencies:
-    "@flayyer/flayyer" "^1.2.0"
-    "@flayyer/flayyer-hook" "^1.2.1"
+    "@flayyer/flayyer" "^1.3.0"
+    "@flayyer/flayyer-hook" "^1.3.0"
     debug "^4.3.1"
     lodash "^4.17.20"
     templite "^1.1.0"
 
-"@flayyer/flayyer-hook@^1.2.1":
+"@flayyer/flayyer-hook@^1.3.0":
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/@flayyer/flayyer-hook/-/flayyer-hook-1.3.0.tgz#18bf21b7412fc1fc1f332cf89820d3423eea149b"
   integrity sha512-03mCwNG57sz2qW/3bRDiBfr/auGIcHjmx6bXv6qNltjrFMbM/Ors2vYjNja+ORK1XeK0la+XHzCNhRDyjxK2SA==
 
-"@flayyer/flayyer@^1.2.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@flayyer/flayyer/-/flayyer-1.3.0.tgz#2915bec796b7a167d38cb345bb1029839685d7f4"
-  integrity sha512-KTXdF4DClP6z7+otwmubkzAWeHdEl9V54CXbosZln0WM4fU/MBG8F78NqqTjsERevsgoUxZFDdVvpW3mA3DHEg==
+"@flayyer/flayyer@^1.3.0":
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/@flayyer/flayyer/-/flayyer-1.3.2.tgz#eb5358dddeda69d935a0fb908a5f6ebae4f2be5e"
+  integrity sha512-BvqQW0/OmUhyRYjHYi5tZzPnqEe/DQr2WGshVvEUa4cqGSYssamcUmnvgb4Nkxqc5AFMNNc3cdahw/mi+BbwKQ==
   dependencies:
-    "@types/qs" "^6.9.5"
+    "@types/qs" "^6.9.6"
     qs "^6.9.6"
 
 "@types/anymatch@*":
@@ -56,10 +56,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.21.tgz#d934aacc22424fe9622ebf6857370c052eae464e"
   integrity sha512-cHYfKsnwllYhjOzuC5q1VpguABBeecUp24yFluHpn/BQaVxB1CuQ1FSRZCzrPxrkIfWISXV2LbeoBthLWg0+0A==
 
-"@types/qs@^6.9.5":
-  version "6.9.5"
-  resolved "https://registry.yarnpkg.com/@types/qs/-/qs-6.9.5.tgz#434711bdd49eb5ee69d90c1d67c354a9a8ecb18b"
-  integrity sha512-/JHkVHtx/REVG0VVToGRGH2+23hsYLHdyG+GrvoUGlGAd0ErauXDyvHtRI/7H7mzLm+tBCKA7pfcpkQ1lf58iQ==
+"@types/qs@^6.9.6":
+  version "6.9.6"
+  resolved "https://registry.yarnpkg.com/@types/qs/-/qs-6.9.6.tgz#df9c3c8b31a247ec315e6996566be3171df4b3b1"
+  integrity sha512-0/HnwIfW4ki2D8L8c9GVcG5I72s9jP5GSLVF0VIXDW00kmIpA6O33G7a8n59Tmh7Nz0WUC3rSb7PTY/sdW2JzA==
 
 "@types/source-list-map@*":
   version "0.1.2"
@@ -112,9 +112,9 @@ debug@^4.3.1:
     ms "2.1.2"
 
 lodash@^4.17.15, lodash@^4.17.20:
-  version "4.17.20"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
-  integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 ms@2.1.2:
   version "2.1.2"
