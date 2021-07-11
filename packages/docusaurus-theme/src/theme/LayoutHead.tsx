@@ -4,7 +4,7 @@
 import React, { useEffect } from "react";
 import Debug from "debug";
 
-import { useFlayyer } from "@flayyer/flayyer-hook";
+import { useFlyyer } from "@flyyer/flyyer-hook";
 
 // @ts-ignore
 import Head from "@docusaurus/Head";
@@ -14,7 +14,7 @@ import type { Props } from "@theme/Layout";
 
 import { CONVERT_VARIABLES, useOptions } from "../utils";
 
-const debug = Debug("flayyer:docusaurus-theme:theme:LayoutHead");
+const debug = Debug("flyyer:docusaurus-theme:theme:LayoutHead");
 
 export default function LayoutHead(props: Props) {
   const options = useOptions();
@@ -23,7 +23,7 @@ export default function LayoutHead(props: Props) {
     debug("got from props: %O", props);
   }, [props]);
 
-  const flayyer = useFlayyer({
+  const flyyer = useFlyyer({
     tenant: options.main?.tenant,
     deck: options.main?.deck,
     template: options.main?.template,
@@ -36,17 +36,17 @@ export default function LayoutHead(props: Props) {
   });
 
   useEffect(() => {
-    debug("flayyer url is: %s", flayyer?.href());
-  }, [flayyer]);
+    debug("flyyer url is: %s", flyyer?.href());
+  }, [flyyer]);
 
-  if (!flayyer) {
+  if (!flyyer) {
     return <InitialLayoutHead {...props} />;
   } else {
     return (
       <>
         <Head>
-          <meta property="og:image" content={flayyer.href()} />
-          <meta name="twitter:image" content={flayyer.href()} />
+          <meta property="og:image" content={flyyer.href()} />
+          <meta name="twitter:image" content={flyyer.href()} />
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
         <InitialLayoutHead {...props} />

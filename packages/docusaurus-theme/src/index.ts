@@ -5,30 +5,30 @@ import path from "path";
 import { Plugin, DocusaurusContext } from "@docusaurus/types";
 import Debug from "debug";
 
-import { PluginFlayyerOptions } from "./options";
+import { PluginFlyyerOptions } from "./options";
 
 const debug = Debug("flayyer:docusaurus-theme");
 
-type IPluginFlayyer = Plugin<PluginFlayyerOptions, unknown>;
+type IPluginFlyyer = Plugin<PluginFlyyerOptions, unknown>;
 
-class PluginFlayyer implements IPluginFlayyer {
-  name: IPluginFlayyer["name"] = "@flayyer/docusaurus-theme";
+class PluginFlyyer implements IPluginFlyyer {
+  name: IPluginFlyyer["name"] = "@flayyer/docusaurus-theme";
 
-  constructor(public readonly context: DocusaurusContext, public readonly options: PluginFlayyerOptions) {
-    debug("creating instance of PluginFlayyer with options: %O", options);
+  constructor(public readonly context: DocusaurusContext, public readonly options: PluginFlyyerOptions) {
+    debug("creating instance of PluginFlyyer with options: %O", options);
   }
 
-  loadContent: IPluginFlayyer["loadContent"] = async () => {
+  loadContent: IPluginFlyyer["loadContent"] = async () => {
     debug("executing loadContent and will return 'this.options'");
     return this.options;
   };
 
-  contentLoaded: IPluginFlayyer["contentLoaded"] = async ({ content, actions }) => {
+  contentLoaded: IPluginFlyyer["contentLoaded"] = async ({ content, actions }) => {
     debug("executing contentLoaded", content, actions);
     actions.setGlobalData(content);
   };
 
-  postBuild: IPluginFlayyer["postBuild"] = async (props) => {
+  postBuild: IPluginFlyyer["postBuild"] = async (props) => {
     debug("executing postBuild");
     if (props.headTags.includes("flayyer.io")) {
       debug("head has flayyer.io images");
@@ -37,17 +37,17 @@ class PluginFlayyer implements IPluginFlayyer {
     }
   };
 
-  // getTypeScriptThemePath: IPluginFlayyer["getTypeScriptThemePath"] = () => {};
+  // getTypeScriptThemePath: IPluginFlyyer["getTypeScriptThemePath"] = () => {};
 
-  getThemePath: IPluginFlayyer["getThemePath"] = () => {
+  getThemePath: IPluginFlyyer["getThemePath"] = () => {
     const folder = path.resolve(__dirname, "theme");
     debug("executing getThemePath", folder);
     return folder;
   };
 
-  injectHtmlTags2: IPluginFlayyer["injectHtmlTags"] = () => {
+  injectHtmlTags2: IPluginFlyyer["injectHtmlTags"] = () => {
     debug("injectHtmlTags");
-    // const flayer = new Flayyer({
+    // const flayer = new Flyyer({
     //   tenant: "flayyer",
     //   deck: "flayyer-docs",
     //   template: "page",
@@ -63,7 +63,7 @@ class PluginFlayyer implements IPluginFlayyer {
   };
 }
 
-export default function (context: DocusaurusContext, options: PluginFlayyerOptions) {
+export default function (context: DocusaurusContext, options: PluginFlyyerOptions) {
   debug("will create theme with options: %O", options);
-  return new PluginFlayyer(context, options);
+  return new PluginFlyyer(context, options);
 }

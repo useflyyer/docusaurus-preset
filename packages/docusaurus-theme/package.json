@@ -1,5 +1,5 @@
 {
-  "name": "@flayyer/docusaurus-theme",
+  "name": "@flyyer/docusaurus-theme",
   "main": "dist/lib/index.js",
   "types": "dist/types/index.d.ts",
   "version": "0.1.3",
@@ -29,8 +29,8 @@
     "react": "*"
   },
   "dependencies": {
-    "@flayyer/flayyer": "^1.3.0",
-    "@flayyer/flayyer-hook": "^1.3.0",
+    "@flyyer/flyyer": "^1.3.0",
+    "@flyyer/flyyer-hook": "^1.3.0",
     "debug": "^4.3.1",
     "lodash": "^4.17.20",
     "templite": "^1.1.0"

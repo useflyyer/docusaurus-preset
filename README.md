@@ -1,4 +1,4 @@
-# Flayyer x Docusaurus
+# Flyyer x Docusaurus
 
 To create dynamic image previews please refer to [docs.flayyer.com](http://docs.flayyer.com/).
 
