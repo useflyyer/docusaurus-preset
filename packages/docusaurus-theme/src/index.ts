@@ -9,7 +9,7 @@ import { PluginFlyyerOptions } from "./options";
 
 const debug = Debug("flyyer:docusaurus-theme");
 
-type IPluginFlyyer = Plugin<PluginFlyyerOptions, unknown>;
+type IPluginFlyyer = Plugin<PluginFlyyerOptions>;
 
 class PluginFlyyer implements IPluginFlyyer {
   name: IPluginFlyyer["name"] = "@flyyer/docusaurus-theme";
