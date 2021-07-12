@@ -7,12 +7,12 @@ import Debug from "debug";
 
 import { PluginFlyyerOptions } from "./options";
 
-const debug = Debug("flayyer:docusaurus-theme");
+const debug = Debug("flyyer:docusaurus-theme");
 
 type IPluginFlyyer = Plugin<PluginFlyyerOptions, unknown>;
 
 class PluginFlyyer implements IPluginFlyyer {
-  name: IPluginFlyyer["name"] = "@flayyer/docusaurus-theme";
+  name: IPluginFlyyer["name"] = "@flyyer/docusaurus-theme";
 
   constructor(public readonly context: DocusaurusContext, public readonly options: PluginFlyyerOptions) {
     debug("creating instance of PluginFlyyer with options: %O", options);
@@ -30,10 +30,10 @@ class PluginFlyyer implements IPluginFlyyer {
 
   postBuild: IPluginFlyyer["postBuild"] = async (props) => {
     debug("executing postBuild");
-    if (props.headTags.includes("flayyer.io")) {
-      debug("head has flayyer.io images");
+    if (props.headTags.includes("flyyer.io")) {
+      debug("head has flyyer.io images");
     } else {
-      debug("head has not flayyer.io images");
+      debug("head has not flyyer.io images");
     }
   };
 
@@ -47,11 +47,6 @@ class PluginFlyyer implements IPluginFlyyer {
 
   injectHtmlTags2: IPluginFlyyer["injectHtmlTags"] = () => {
     debug("injectHtmlTags");
-    // const flayer = new Flyyer({
-    //   tenant: "flayyer",
-    //   deck: "flayyer-docs",
-    //   template: "page",
-    // });
     return {
       headTags: [
         // {
