@@ -9,12 +9,12 @@ import Debug from "debug";
 import pick from "lodash/pick";
 import templite from "templite";
 
-import { PluginFlayyerOptions } from "./options";
+import { PluginFlyyerOptions } from "./options";
 
-const debug = Debug("flayyer:docusaurus-theme:utils");
+const debug = Debug("flyyer:docusaurus-theme:utils");
 
 /**
- * Convert meta data from the markdown files to Flayyer variables.
+ * Convert meta data from the markdown files to Flyyer variables.
  * @example
  * ---
  * id: 123
@@ -43,7 +43,7 @@ export function CONVERT_VARIABLES(variables: any, meta: Metadata): any {
 }
 
 export function useOptions() {
-  const options: PluginFlayyerOptions = usePluginData("@flayyer/docusaurus-theme");
+  const options: PluginFlyyerOptions = usePluginData("@flyyer/docusaurus-theme");
 
   useEffect(() => {
     debug("got from usePluginData: %O", options);

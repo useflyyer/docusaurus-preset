@@ -1,11 +1,3 @@
-import { FlayyerParams } from "@flayyer/flayyer";
+import { FlyyerParams } from "@flyyer/flyyer";
 
-export interface PluginFlayyerOptionItem<T>
-  extends Pick<FlayyerParams<T>, "tenant" | "deck" | "template" | "version" | "extension"> {
-  variables?: FlayyerParams<T>["variables"] | string[];
-}
-export interface PluginFlayyerOptions {
-  main?: PluginFlayyerOptionItem<{ [key: string]: any }>;
-  docs?: PluginFlayyerOptionItem<{ [key: string]: any }>;
-  blog?: PluginFlayyerOptionItem<{ [key: string]: any }>;
-}
+export type PluginFlyyerOptions = Pick<FlyyerParams<any>, "project" | "extension" | "version" | "variables">;
