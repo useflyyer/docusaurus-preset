@@ -7,10 +7,10 @@ To create dynamic image previews please refer to [docs.flyyer.io](http://docs.fl
 ## Install
 
 ```bash
-yarn add @flyyer/docusaurus-preset
+yarn add @flyyer/docusaurus-preset @flyyer/flyyer
 
 # or with npm
-npm install --save @flyyer/docusaurus-preset
+npm install --save @flyyer/docusaurus-preset @flyyer/flyyer
 ```
 
 On your `docusaurus.config.js` add `@flyyer/docusaurus-preset` at the end of your `presets` array:
@@ -23,10 +23,39 @@ On your `docusaurus.config.js` add `@flyyer/docusaurus-preset` at the end of you
     [
       "@flyyer/docusaurus-preset",
       {
-        /**
-         * Get your project's identifier at https://flyyer.io/dashboard/_/projects/_/integrate
-         */
-        project: "",
+        flyyer: {
+          /**
+           * Get your project's id at https://flyyer.io/dashboard/_/projects/_/integrate
+           */
+          project: "",
+        }
+      },
+    ],
+  ],
+}
+```
+
+### Advanced
+
+#### Signed URLs
+
+To prevent bad actors from generating images you can sign your URLs.
+
+🔑 Get your **secret key** here: [https://www.flyyer.io/dashboard/_/projects/_/advanced](flyyer.io/dashboard/_/projects/_/advanced).
+
+> Note: This key is different form your `FLYYER_KEY`.
+
+```js
+{
+  presets: [
+    [
+      "@flyyer/docusaurus-preset",
+      {
+        flyyer: {
+          project: "",
+          secret: process.env.FLYYER_SIGNATURE_KEY || "your-key",
+          strategy: "JWT", // "JWT" | "HMAC"
+        }
       },
     ],
   ],

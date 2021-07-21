@@ -1,3 +1,5 @@
 import { FlyyerParams } from "@flyyer/flyyer";
 
-export type PluginFlyyerOptions = Pick<FlyyerParams<any>, "project" | "extension" | "version" | "variables">;
+export type PluginFlyyerOptions = {
+  flyyer: FlyyerParams<any>;
+};

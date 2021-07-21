@@ -4,7 +4,7 @@
 import React, { useEffect } from "react";
 import Debug from "debug";
 
-import { useFlyyer } from "@flyyer/flyyer-hook";
+import { Flyyer } from "@flyyer/flyyer";
 
 // @ts-expect-error How to import?
 import { useLocation } from "@docusaurus/router";
@@ -28,23 +28,33 @@ export default function LayoutHead(props: Props) {
     debug("got from props: %O", props);
   }, [props]);
 
-  const flyyer = useFlyyer({
-    ...options,
-    path: location.pathname,
-  });
+  let flyyerURL: string | null = null;
+  try {
+    if (options && options["flyyer"]) {
+      const flyyer = new Flyyer({
+        ...options["flyyer"],
+        path: location.pathname,
+      });
+      flyyerURL = flyyer.href();
+    } else {
+      console.warn("Missing 'flyyer' config. Please check out https://docs.flyyer.io/guides/javascript/docusaurus");
+    }
+  } catch (err) {
+    console.error("Failed to initialize Flyyer.io:", err);
+  }
 
   useEffect(() => {
-    debug("flyyer url is: %s", flyyer?.href());
-  }, [flyyer]);
+    debug("flyyer url is: %s", flyyerURL);
+  }, [flyyerURL]);
 
-  if (!flyyer) {
+  if (!flyyerURL) {
     return <InitialLayoutHead {...props} />;
   } else {
     return (
       <>
         <Head>
-          <meta property="og:image" content={flyyer.href()} />
-          <meta name="twitter:image" content={flyyer.href()} />
+          <meta property="og:image" content={flyyerURL} />
+          <meta name="twitter:image" content={flyyerURL} />
           <meta name="twitter:card" content="summary_large_image" />
           <meta property="flyyer:title" content={props.title} />
           <meta property="flyyer:description" content={props.description} />
