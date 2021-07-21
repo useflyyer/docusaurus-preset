@@ -4,6 +4,8 @@ To create dynamic image previews please refer to [docs.flyyer.io](http://docs.fl
 
 **This plugin required [Docusaurus v2](https://v2.docusaurus.io/).** There is no support for v1.
 
+**Need help? [Join our Discord](https://www.flyyer.io/discord)**
+
 ## Install
 
 ```bash
@@ -41,7 +43,7 @@ On your `docusaurus.config.js` add `@flyyer/docusaurus-preset` at the end of you
 
 To prevent bad actors from generating images you can sign your URLs.
 
-🔑 Get your **secret key** here: [https://www.flyyer.io/dashboard/_/projects/_/advanced](flyyer.io/dashboard/_/projects/_/advanced).
+🔑 Get your **secret key** here: [flyyer.io/dashboard/_/projects/_/advanced](https://www.flyyer.io/dashboard/_/projects/_/advanced).
 
 > Note: This key is different form your `FLYYER_KEY`.
 
@@ -97,3 +99,7 @@ Publish packages:
 ```bash
 yarn run lerna publish from-git --yes
 ```
+
+## License
+
+MIT
